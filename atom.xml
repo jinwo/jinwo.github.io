@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-07-06T13:21:07.759Z</updated>
+    <updated>2019-07-06T13:26:15.677Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -16,7 +16,13 @@
         <link href="https://jinwo.github.io/post/tu-chuang-da-jian">
         </link>
         <updated>2019-07-06T12:46:28.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA">https://pockies.github.io/2019/04/27/weibo-to-github/</a></p>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>PicGo</strong> ！<br>
+✍️  <strong>Picgo</strong> 免费的图床客户端客户端。你可以用它来上传您的图片至各大云端北非、取得外链... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>PicGo</strong> ！<br>
+✍️  <strong>Picgo</strong> 免费的图床客户端客户端。你可以用它来上传您的图片至各大云端北非、取得外链... ...</p>
+<!-- more -->
+<p><a href="%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA">https://pockies.github.io/2019/04/27/weibo-to-github/</a></p>
 <p>PicGo是一款支持多图床上传的客户端软件，功能强大。
 根据你的系统下载安装对应的PicGo版本，打开软件并展开右侧图床设置；</p>
 <ul>
