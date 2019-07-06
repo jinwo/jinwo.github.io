@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-06-29T02:02:00.858Z</updated>
+    <updated>2019-07-06T12:47:22.757Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://jinwo.github.io/images/avatar.png</logo>
     <icon>https://jinwo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 不要旧队友</rights>
+    <entry>
+        <title type="html"><![CDATA[图床搭建]]></title>
+        <id>https://jinwo.github.io/post/tu-chuang-da-jian</id>
+        <link href="https://jinwo.github.io/post/tu-chuang-da-jian">
+        </link>
+        <updated>2019-07-06T12:46:28.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA">https://pockies.github.io/2019/04/27/weibo-to-github/</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://jinwo.github.io/post/hello-gridea</id>
