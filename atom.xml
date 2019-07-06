@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-07-06T14:17:21.210Z</updated>
+    <updated>2019-07-06T14:19:31.973Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -31,7 +31,7 @@
 <code>维度</code>窗口显示的数据角色为维度，往往是一些分类、时间方面的<code>定性字段</code>，将其拖放到功能区时，Tableau不会对其进行计算，而是对视图区<code>进行分区</code>，维度的内容显示为各区的<code>标题</code>。
 <strong>离散-连续</strong>
 <code>离散和连续</code>是另一种数据角色分类，在Tableau中，<code>蓝色是离散字段</code>，<code>绿色是连续字段</code>。<code>离散</code>字段在行列功能区时总是在视图中显示为<code>标题</code>，而<code>连续</code>字段则在视图中显示为<code>轴</code>。
-<img src="!%5B%5D(https://raw.githubusercontent.com/jinwo/pic/master/20190706221700.png)" alt="离散-连续"></p>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706220959.png" alt="离散-连续"></p>
 <h3 id="3-字段类型">3、字段类型</h3>
 <p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706221239.png" alt="字段类型"></p>
 ]]></content>
