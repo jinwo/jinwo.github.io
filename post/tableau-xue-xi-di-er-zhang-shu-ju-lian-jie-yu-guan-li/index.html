@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Tableau学习（第二章）-数据连接与管理 | 不要旧队友</title>
+<meta name="description" content="瞎搞搞">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jinwo.github.io/favicon.ico?v=1562464901848">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://jinwo.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jinwo.github.io">
+        <img src="https://jinwo.github.io/images/avatar.png?v=1562464901848" class="site-logo">
+        <h1 class="site-title">不要旧队友</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      瞎搞搞
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://jinwo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Tableau学习（第二章）-数据连接与管理</h2>
+            <div class="post-date">2019-07-07</div>
+            
+            <div class="post-content">
+              <p>🎞实际分析过程中，数据可能来自多张数据表，也可能来自不同的文件或者服务器。Tableau的数据整合功能可实现同一数据源的多表联结、多个数据源的数据融合，以及针对源数据的行列转换。</p>
+<!-- more -->
+<h3 id="1-实现多表联结">1、实现多表联结</h3>
+<p>例子中，选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091518.png" alt="编辑数据源">
+使用鼠标将“台区基本信息表”拖放到中心区域，Tableau自动将“台区基本信息”与“重过载信息”相联接，默认选择的是<code>内部联接</code>。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091620.png" alt="添加联接关系">
+其他选项还包括<code>左侧</code>、<code>右侧</code>、<code>完全外部</code>联接等。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091814.png" alt="指定关联字段">
+完成表联接后，选择“转到工作表”，可以在工作区数据窗口中看到“台区基本信息”“重过载信息”两张数据表的信息。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091934.png" alt="转到工作区界面"></p>
+<h3 id="2-多数据源的数据融合">2、多数据源的数据融合</h3>
+<p>如果台区的基本信息与重过载信息属于不同的数据源，那么通过多表联接的方式将无法实现台区基本信息和重过载信息的关联。这种情况下，需要通过添加数据源的方式实现数据融合。
+在已经建立了“重过载信息”数据连接的基础上，在主界面菜单栏选择“数据”➤“新建数据源”，选择“台区基本信息”文件，添加“台区基本信息”数据源。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092247.png" alt="连接到多个数据源">
+主数据源是在视图中首先使用的数据源。将“重过载信息”数据源的字段拖放到工作区建立视图后，数据源上的标记变为蓝色，表示是主数据源。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092812.png" alt="主数据源显示">
+在主数据源之外，再使用其他数据源后，可以看到数据源用橙色标记，表示此数据源是从数据源。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092843.png" alt="从数据源显示"></p>
+<pre><code>说明 多维数据源（多维数据集）不能用作从数据源，只能用作主数据源。
+</code></pre>
+<p>可以选择“数据”➤“编辑关系”来创建或修改当前数据源关联关系
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093300.png" alt="编辑关系">
+在弹出的“关系”窗口中我们可以通过“主数据源”下拉菜单选择主数据源
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093341.png" alt="“关系”对话框">
+选择“自定义”，单击“添加”选项来创建新的自定义关系。在弹出的“添加/编辑字段映射”
+对话框中选择主数据源中的“台区”字段，与从数据源中的“台区”字段进行联接，完成后单击
+“确定”
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093416.png" alt="创建自定义关系">
+回到“关系”对话框，可以看到新添加的联接关系
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093444.png" alt="自定义添加">
+在“数据”窗口中，可以看到“台区基本信息”数据源字段和主数据源的联接状态，其中“台
+区”字段与主数据源“重过载信息”的“台区”字段进行联接，其他字段则不作为联接字段
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093528.png" alt="激活的联接字段">
+联接字段有“激活”和“未激活”两种状态，已激活的联接字段用图标 <code>🔗</code>来指示，未激活的联接字段用图标<code>未🔗</code>来指示。处于未激活状态时，主、从数据源不使用该联接字段进行联接，单击图标可以进行状态切换。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093808.png" alt="未激活的联接字段"></p>
+<h3 id="3-行列转换">3、行列转换</h3>
+<p>在使用Tableau进行数据分析时，有时我们需要将源数据中的不同列整合至同一列， Tableau
+9.0及以上版本支持对源数据的行列转换。
+在数据源窗口，按住Shift或Ctrl，同时选中需要进行转换的列，单击已选择的任一列右侧的♥按钮，在弹出对话框中选择“数据透视表”。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707094048.png" alt="“行列转换”">
+执行完此操作后可发现，Tableau自动产生新列“数据透视表字段名称”，原列名称转换为该列的不同字段值，同时自动产生新列“数据透视表字段值”，原列的字段值转换至该列，用户可根据实际业务含义对列名进行修改。
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707094218.png" alt="操作完成界面"></p>
+<h3 id="4-数据加载">4、数据加载</h3>
+<p>Tableau加载数据有两种基本方式：一种是实时连接，即Tableau从数据源获取查询结果，本身不存储源数据；另一种是数据提取，将数据提取到Tableau的数据引擎中，由Tableau进行管理。</p>
+<pre><code>本节重点介绍数据提取
+</code></pre>
+<p><strong>在下列情况下，建议使用数据提取的方式</strong>。
+ 源数据库的性能不佳：源数据库的性能跟不上分析速度的需要，则可以由Tableau的数据引擎来提供快速交互式分析。
+ 需要脱机访问数据：如果需要在差旅途中脱机访问数据，则可以将相关数据提取到本地。
+ 减轻源系统的压力：如果源系统是重要的业务系统，那么建议将数据访问转移到本地，以减轻对源系统的压力。
+<strong>而在下列情况下，则不建议选择数据提取方式。</strong>
+ 源数据库性能优越：IT基础设施支持快速数据分析，那么不建议进行数据复制。
+ 数据的实时性要求高：需要使用实时更新的数据进行分析，则不建议使用数据提取的方式。
+ 数据的保密要求高：出于信息安全考虑不希望将数据保存在本地，则不建议进行数据提取。</p>
+<h4 id="41创建数据提取">4.1创建数据提取</h4>
+<p>Tableau有两种方式创建数据提取：一种是完成数据连接之后，针对数据源进行提取数据操作；另一种是在新建数据源时选择“提取”方式。</p>
+<ol>
+<li>对数据源进行“提取数据”操作
+在主界面选择“数据”➤“&lt;数据源名称&gt;”➤“提取数据”，进入提取数据对话框；也可以选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”➤“提取”➤“编辑”
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095051.png" alt="提取数据">
+在打开的提取数据对话框中可以看到筛选器、聚合、行数3种提取选项
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095125.png" alt="提取数据对话框">
+选择“添加”，弹出添加筛选器对话框，选择用于筛选器的字段
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095206.png" alt="用作筛选器的字段">
+可以选择“年”和“月”作为此数据源的数据提取字段
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095238.png" alt="选择添加筛选器">
+在此界面可以指定是否聚合可视维度，也可以选择从数据源提取前若干行。选择“确定”，在弹出的另存为对话框中提取的数据以.tde格式保存，选择“保存”完成创建数据提取
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095319.png" alt="提取数据的保存">
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095425.png" alt="说明">
+<code>剩余数据 刷新提取 向数据提取添加行 优化数据提取 三种操作详见操作文档</code></li>
+</ol>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jinwo.github.io/post/tableau-xue-xi-di-yi-zhang-ru-men">
+                  <h3 class="post-title">
+                    Tableau学习（第一章）-入门
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'a4b782f6604a7b132c44',
+        clientSecret: '7f7d05650bf0a36da1fafcf7903a51a0a872fa29',
+        repo: 'jinwo.github.io',
+        owner: 'jinwo',
+        admin: ['jinwo'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
