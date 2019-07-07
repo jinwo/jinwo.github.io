@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-07-07T02:06:51.331Z</updated>
+    <updated>2019-07-07T02:07:54.233Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -65,13 +65,17 @@
 <p>Tableau加载数据有两种基本方式：一种是实时连接，即Tableau从数据源获取查询结果，本身不存储源数据；另一种是数据提取，将数据提取到Tableau的数据引擎中，由Tableau进行管理。</p>
 <pre><code>本节重点介绍数据提取
 </code></pre>
-<p><strong>在下列情况下，建议使用数据提取的方式</strong></p>
+<blockquote>
+<p>在下列情况下，建议使用数据提取的方式</p>
+</blockquote>
 <ul>
 <li>源数据库的性能不佳：源数据库的性能跟不上分析速度的需要，则可以由Tableau的数据引擎来提供快速交互式分析。</li>
 <li>需要脱机访问数据：如果需要在差旅途中脱机访问数据，则可以将相关数据提取到本地。</li>
 <li>减轻源系统的压力：如果源系统是重要的业务系统，那么建议将数据访问转移到本地，以减轻对源系统的压力。</li>
 </ul>
-<p><strong>而在下列情况下，则不建议选择数据提取方式</strong></p>
+<blockquote>
+<p>而在下列情况下，则不建议选择数据提取方式</p>
+</blockquote>
 <ul>
 <li>源数据库性能优越：IT基础设施支持快速数据分析，那么不建议进行数据复制。</li>
 <li>数据的实时性要求高：需要使用实时更新的数据进行分析，则不建议使用数据提取的方式。</li>
