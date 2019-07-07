@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-07-07T02:03:25.325Z</updated>
+    <updated>2019-07-07T02:05:25.691Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -65,14 +65,16 @@
 <p>Tableau加载数据有两种基本方式：一种是实时连接，即Tableau从数据源获取查询结果，本身不存储源数据；另一种是数据提取，将数据提取到Tableau的数据引擎中，由Tableau进行管理。</p>
 <pre><code>本节重点介绍数据提取
 </code></pre>
-<p><strong>在下列情况下，建议使用数据提取的方式</strong>。
- 源数据库的性能不佳：源数据库的性能跟不上分析速度的需要，则可以由Tableau的数据引擎来提供快速交互式分析。
- 需要脱机访问数据：如果需要在差旅途中脱机访问数据，则可以将相关数据提取到本地。
- 减轻源系统的压力：如果源系统是重要的业务系统，那么建议将数据访问转移到本地，以减轻对源系统的压力。
-<strong>而在下列情况下，则不建议选择数据提取方式。</strong>
- 源数据库性能优越：IT基础设施支持快速数据分析，那么不建议进行数据复制。
- 数据的实时性要求高：需要使用实时更新的数据进行分析，则不建议使用数据提取的方式。
- 数据的保密要求高：出于信息安全考虑不希望将数据保存在本地，则不建议进行数据提取。</p>
+<p><strong>在下列情况下，建议使用数据提取的方式</strong></p>
+<ul>
+<li>源数据库的性能不佳：源数据库的性能跟不上分析速度的需要，则可以由Tableau的数据引擎来提供快速交互式分析。</li>
+<li>需要脱机访问数据：如果需要在差旅途中脱机访问数据，则可以将相关数据提取到本地。</li>
+<li>减轻源系统的压力：如果源系统是重要的业务系统，那么建议将数据访问转移到本地，以减轻对源系统的压力。
+<strong>而在下列情况下，则不建议选择数据提取方式。</strong></li>
+<li>源数据库性能优越：IT基础设施支持快速数据分析，那么不建议进行数据复制。</li>
+<li>数据的实时性要求高：需要使用实时更新的数据进行分析，则不建议使用数据提取的方式。</li>
+<li>数据的保密要求高：出于信息安全考虑不希望将数据保存在本地，则不建议进行数据提取。</li>
+</ul>
 <h4 id="41创建数据提取">4.1创建数据提取</h4>
 <p>Tableau有两种方式创建数据提取：一种是完成数据连接之后，针对数据源进行提取数据操作；另一种是在新建数据源时选择“提取”方式。</p>
 <ol>
@@ -87,9 +89,11 @@
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095238.png" alt="选择添加筛选器">
 在此界面可以指定是否聚合可视维度，也可以选择从数据源提取前若干行。选择“确定”，在弹出的另存为对话框中提取的数据以.tde格式保存，选择“保存”完成创建数据提取
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095319.png" alt="提取数据的保存">
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095425.png" alt="说明">
-<code>剩余数据 刷新提取 向数据提取添加行 优化数据提取 三种操作详见操作文档</code></li>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095425.png" alt="说明"></li>
 </ol>
+<blockquote>
+<p>剩余数据 刷新提取 向数据提取添加行 优化数据提取 三种操作详见操作文档</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
