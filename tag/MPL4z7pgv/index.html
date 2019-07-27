@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 不要旧队友</title>
+<title>Tableau 数据分析 | 不要旧队友</title>
 <meta name="description" content="瞎搞搞">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,12 +13,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://jinwo.github.io/styles/main.css">
 
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -97,26 +91,34 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
-            
-            <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+          <h2 class="current-tag">标签: Tableau 数据分析</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jinwo.github.io/post/cai-niao-xue-xi-tableau">
+                  <h2 class="post-title">菜鸟学习Tableau</h2>
+                </a>
+                <div class="post-date">
+                  2019-07-27
+                </div>
+                <div class="post-abstract">
+                  <p>“伟大始于渺小，……”</p>
 
-            </div>
-            
-            
-
-            
+                </div>
+              </div>
               
-                <div id="gitalk-container" data-aos="fade-in"></div>
+                <a class="right" href="https://jinwo.github.io/post/cai-niao-xue-xi-tableau">
+                  <div class="feature-container" style="background-image: url('https://raw.githubusercontent.com/jinwo/pic/master/20190706225255.png')">
+                  </div>
+                </a>
               
+            </article>
+          
 
-              
-            
-
-          </div>
+          <div class="pagination-container">
+  
+  
+</div>
 
         </div>
       </div>
@@ -138,29 +140,6 @@ var app = new Vue({
 })
 
 </script>
-
-
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: 'a4b782f6604a7b132c44',
-        clientSecret: '7f7d05650bf0a36da1fafcf7903a51a0a872fa29',
-        repo: 'jinwo.github.io',
-        owner: 'jinwo',
-        admin: ['jinwo'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
 
 
 
