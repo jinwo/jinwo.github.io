@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jinwo.github.io</id>
     <title>不要旧队友</title>
-    <updated>2019-07-07T02:08:23.495Z</updated>
+    <updated>2019-07-27T04:42:09.565Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jinwo.github.io"/>
     <link rel="self" href="https://jinwo.github.io/atom.xml"/>
@@ -10,6 +10,147 @@
     <logo>https://jinwo.github.io/images/avatar.png</logo>
     <icon>https://jinwo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 不要旧队友</rights>
+    <entry>
+        <title type="html"><![CDATA[菜鸟学习Tableau]]></title>
+        <id>https://jinwo.github.io/post/cai-niao-xue-xi-tableau</id>
+        <link href="https://jinwo.github.io/post/cai-niao-xue-xi-tableau">
+        </link>
+        <updated>2019-07-27T00:28:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>“伟大始于渺小，……”</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>“伟大始于渺小，……”</p>
+<!-- more -->
+<ol>
+<li>数据解释器</li>
+</ol>
+<blockquote>
+<p>数据解释器：tableau通过数据解释器自动对数据源的附加表、子表、分层页眉、无关的页眉和页脚，或者空白行和列进行检测，移除无关信息并优化准备用于分析的数据源。通常，在设置数据源之后，如果 tableau 检测到数据源存在如上问题，则会提示使用数据解释器。</p>
+</blockquote>
+<ol start="2">
+<li><a href="https://mp.weixin.qq.com/s/IOS_BHtIIQ6L3nG5_4QRFA">数据整合（表）</a></li>
+</ol>
+<blockquote>
+<p>完成与数据源的连接后，需要对来自不同数据源、多个数据表的数据进行融合、连接等操作，同时还要选择适合的数据载入方式，本节记录的内容主要包括：数据联接、数据合并、数据加载。<br>
+<code>数据联接</code></p>
+</blockquote>
+<pre><code>数据联接方式分为四种，分别是内联接、左联接、右联接和完全外部联接，且如果两张表的关键字匹配不到的数据，会在对应的数据网格中显示为NULL。
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190727085405.png" alt="联接方式"></p>
+<ul>
+<li>内连接--生成的新表仅保留两张数据表中具有相同关键字段的行。</li>
+<li>左连接--生成的新表包含左侧表中所有值以及右侧表中相对应的匹配值。</li>
+<li>右连接--生成的新表包含右侧表中所有值以及左侧表中相对应的匹配值。</li>
+<li>完全外部联接--生成的新表将包含两个表中的所有值。</li>
+</ul>
+<p><code>数据合并</code></p>
+<pre><code>数据合并分为自动合并与手动合并。当需要将有多张数据结构一致的表格整合汇总在一起时，则可以使用数据合并。对于数据联接和数据合并的简单理解，数据联接是横向扩展数据表的字段，纵向的数据行数不会变得更多，而数据合并正好相反，它是纵向增加数据行数，横向的数据表字段不会变得更多。
+---要进行数据合并操作，每个表必须具有相同的字段数，并且相关字段必须具有匹配的字段名称和数据类型。
+</code></pre>
+<ol start="3">
+<li><a href="https://mp.weixin.qq.com/s/IOS_BHtIIQ6L3nG5_4QRFA">数据加载</a></li>
+</ol>
+<blockquote>
+<p>“实时连接”：直接从数据源实时查询获取数据信息，tableau不对源数据进行存储。<br>
+“数据提取”：将数据源的数据保存到本地计算机，大幅缩短tableau查询载入源数据的时间。</p>
+</blockquote>
+<ul>
+<li>“实时”和 “数据提取”的选择</li>
+</ul>
+<p><strong>“数据提取”</strong>：</p>
+<blockquote>
+<p>1、不便于实时连接数据源，如数据是通过本地服务器获取，但又需要在别的电脑进行分析时，可以通过”数据提取“将所需分析的数据保存到本地电脑。<br>
+2、分析的数据量较大，需要提高数据载入效率，降低源数据库的访问压力时，可以通过数据提取将数据转移到本地计算机。</p>
+</blockquote>
+<p><strong>“实时连接”：</strong></p>
+<blockquote>
+<p>1、 源数据的保密性要求较高，处于安全考虑不希望保存到本地时，可以采取实时连接的方式。<br>
+2、要实时更新源数据信息，并且对实时性的要求较高，可以选择实时连接的方式。</p>
+</blockquote>
+<ol start="4">
+<li><a href="https://mp.weixin.qq.com/s/yx7RbGTNhMwiN1mh2ayJ1Q">数据类型 </a></li>
+</ol>
+<blockquote>
+<p>Tableau的数据类型主要有文本值、日期值、日期和时间值、数字值、布尔值、地理值六类。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190727092136.png" alt="Tableau的数据类型"></p>
+</blockquote>
+<ol start="5">
+<li><a href="https://mp.weixin.qq.com/s/yx7RbGTNhMwiN1mh2ayJ1Q">维度、度量、离散、连续 </a></li>
+</ol>
+<blockquote>
+<p>维度、度量、连续、离散的释义<br>
+1、维度呈现为标题、度量呈现为连续轴<br>
+2、离散字段创建标题、连续字段创建连续轴<br>
+3、辨别视图中的字段是度量还是维度的依据在于该字段是否已聚合<br>
+4、维度和度量是可以相互转化的<br>
+5、离散字段和连续字段也是可以相互转化的<br>
+6、维度/度量和离散/连续不是必然对应的</p>
+</blockquote>
+<pre><code>eg:邮政编码是由一串数字组成，tableau会将其划入到“度量”，但实际上，邮政编码通过是作为分类信息来处理，如统计同一邮政编码客户的相关数据，而不是对邮政编码进行求和、求平均数、求最大最小值等计算。
+ eg:产品的“价格”字段是数字型，tableau也会将其划入到“度量”，可以对产品价格进行求和、求平均等计算，但如果希望统计各个价格或某价格区间的产品销量，作为“度量”字段的“价格”显然不能满足分析需要，这时就需要将“价格”字段从“度量”转换为“维度”。
+</code></pre>
+<ol start="6">
+<li><a href="https://mp.weixin.qq.com/s/qDEu59QDXBwgYZz52PmoaA">集（维度）</a></li>
+</ol>
+<blockquote>
+<p>“集”是根据某些条件定义数据子集的自定义字段，可以理解为维度字段的部分成员。</p>
+</blockquote>
+<p><code>常量集</code></p>
+<blockquote>
+<p>常量集属于静态集，其成员是固定的，不会根据数据变化而变化。常量集可以基于单个维度或多个维度创建。</p>
+</blockquote>
+<p><code>计算集</code></p>
+<blockquote>
+<p>计算集可基于计算条件建立，创建后会根据数据动态变化。计算集只能基于单个维度进行创建。</p>
+</blockquote>
+<ul>
+<li>集的合并</li>
+</ul>
+<blockquote>
+<p>集与集之间可以进行合并（两个集要进行合并，必须具有相同的维度），从而对集内的成员进一步比较和筛选。集的合并分为三种情况，分别是并集、交集、差集</p>
+</blockquote>
+<ol start="7">
+<li><a href="https://mp.weixin.qq.com/s/rzDIBzPb-s9YxHAmPl54wA">参数（度量）</a></li>
+</ol>
+<blockquote>
+<p>参数是实现控制与交互最常见、最方便的方法。<br>
+简单的说，参数是可在集、计算字段、筛选器中替换常量值的动态值，通过参数，能够实现快速、简便的交互。</p>
+</blockquote>
+<p><strong>参数依据：</strong></p>
+<pre><code>
+1、分析
+对需要使用参数的集、计算字段、筛选器等对象进行分析，确定动态值。
+2、创建
+根据要引入的动态值类型创建参数。
+3、使用
+将参数应用在目标对象中，即把创建的参数与集、计算字段、筛选器等对象进行关联。
+</code></pre>
+<ol start="8">
+<li><a href="https://mp.weixin.qq.com/s/c2a5Nnw6Lnj9kOeXHQalOQ">计算字段</a></li>
+</ol>
+<blockquote>
+<p>计算字段是使用函数和运算符构造公式，对数据源字段（包括维度、度量、参数等）进行重新定义的字段。它是原始数据源中没有，由使用者创建出来的新字段。</p>
+</blockquote>
+<ol start="9">
+<li><a href="https://mp.weixin.qq.com/s/EnlksF9b1Jix7D-ERnY3_w">表计算-基础</a></li>
+</ol>
+<blockquote>
+<p>由于Tableau无法像Excel一样操作单元格，因此不能直接按照Excel的使用方法，即通过单元格创建公式来达到计算目标，而是要通过创建表计算，选择相应的计算规则、计算方式、计算顺序，让tableau知晓我们想让它如何去计算，从而实现我们的计算目标。</p>
+</blockquote>
+<p><code>计算类型</code><br>
+“计算类型”提供了具体计算方式，包括差异、百分比差异、百分比、合计百分比、排序、百分位、汇总、移动计算。日常使用的绝大多数分析指标都可以通过这些计算类型进行实现。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190727123250.png" alt="计算类型"></p>
+<pre><code>
+eg:销售增长率可以通过“百分比差异”计算得出
+eg:销售额同比增量可以通过“差异”计算得出
+eg:销售额排名可以通过“排序”计算得出
+</code></pre>
+<p><code>计算依据</code></p>
+<blockquote>
+<p>“计算依据”定义了tableau在执行表计算时的计算顺序，主要分为两类，一类是封装好的计算顺序和规则，如表（横穿）、区（向下）、单元格等，一类是自定义计算顺序和规则，即“特定维度”。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190727123557.png" alt="计算依据"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Tableau学习（第二章）-数据连接与管理]]></title>
         <id>https://jinwo.github.io/post/tableau-xue-xi-di-er-zhang-shu-ju-lian-jie-yu-guan-li</id>
@@ -21,45 +162,45 @@
         <content type="html"><![CDATA[<p>🎞实际分析过程中，数据可能来自多张数据表，也可能来自不同的文件或者服务器。Tableau的数据整合功能可实现同一数据源的多表联结、多个数据源的数据融合，以及针对源数据的行列转换。</p>
 <!-- more -->
 <h3 id="1-实现多表联结">1、实现多表联结</h3>
-<p>例子中，选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091518.png" alt="编辑数据源">
-使用鼠标将“台区基本信息表”拖放到中心区域，Tableau自动将“台区基本信息”与“重过载信息”相联接，默认选择的是<code>内部联接</code>。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091620.png" alt="添加联接关系">
-其他选项还包括<code>左侧</code>、<code>右侧</code>、<code>完全外部</code>联接等。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091814.png" alt="指定关联字段">
-完成表联接后，选择“转到工作表”，可以在工作区数据窗口中看到“台区基本信息”“重过载信息”两张数据表的信息。
+<p>例子中，选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091518.png" alt="编辑数据源"><br>
+使用鼠标将“台区基本信息表”拖放到中心区域，Tableau自动将“台区基本信息”与“重过载信息”相联接，默认选择的是<code>内部联接</code>。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091620.png" alt="添加联接关系"><br>
+其他选项还包括<code>左侧</code>、<code>右侧</code>、<code>完全外部</code>联接等。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091814.png" alt="指定关联字段"><br>
+完成表联接后，选择“转到工作表”，可以在工作区数据窗口中看到“台区基本信息”“重过载信息”两张数据表的信息。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707091934.png" alt="转到工作区界面"></p>
 <h3 id="2-多数据源的数据融合">2、多数据源的数据融合</h3>
-<p>如果台区的基本信息与重过载信息属于不同的数据源，那么通过多表联接的方式将无法实现台区基本信息和重过载信息的关联。这种情况下，需要通过添加数据源的方式实现数据融合。
-在已经建立了“重过载信息”数据连接的基础上，在主界面菜单栏选择“数据”➤“新建数据源”，选择“台区基本信息”文件，添加“台区基本信息”数据源。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092247.png" alt="连接到多个数据源">
-主数据源是在视图中首先使用的数据源。将“重过载信息”数据源的字段拖放到工作区建立视图后，数据源上的标记变为蓝色，表示是主数据源。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092812.png" alt="主数据源显示">
-在主数据源之外，再使用其他数据源后，可以看到数据源用橙色标记，表示此数据源是从数据源。
+<p>如果台区的基本信息与重过载信息属于不同的数据源，那么通过多表联接的方式将无法实现台区基本信息和重过载信息的关联。这种情况下，需要通过添加数据源的方式实现数据融合。<br>
+在已经建立了“重过载信息”数据连接的基础上，在主界面菜单栏选择“数据”➤“新建数据源”，选择“台区基本信息”文件，添加“台区基本信息”数据源。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092247.png" alt="连接到多个数据源"><br>
+主数据源是在视图中首先使用的数据源。将“重过载信息”数据源的字段拖放到工作区建立视图后，数据源上的标记变为蓝色，表示是主数据源。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092812.png" alt="主数据源显示"><br>
+在主数据源之外，再使用其他数据源后，可以看到数据源用橙色标记，表示此数据源是从数据源。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707092843.png" alt="从数据源显示"></p>
 <pre><code>说明 多维数据源（多维数据集）不能用作从数据源，只能用作主数据源。
 </code></pre>
-<p>可以选择“数据”➤“编辑关系”来创建或修改当前数据源关联关系
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093300.png" alt="编辑关系">
-在弹出的“关系”窗口中我们可以通过“主数据源”下拉菜单选择主数据源
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093341.png" alt="“关系”对话框">
-选择“自定义”，单击“添加”选项来创建新的自定义关系。在弹出的“添加/编辑字段映射”
-对话框中选择主数据源中的“台区”字段，与从数据源中的“台区”字段进行联接，完成后单击
-“确定”
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093416.png" alt="创建自定义关系">
-回到“关系”对话框，可以看到新添加的联接关系
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093444.png" alt="自定义添加">
-在“数据”窗口中，可以看到“台区基本信息”数据源字段和主数据源的联接状态，其中“台
-区”字段与主数据源“重过载信息”的“台区”字段进行联接，其他字段则不作为联接字段
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093528.png" alt="激活的联接字段">
-联接字段有“激活”和“未激活”两种状态，已激活的联接字段用图标 <code>🔗</code>来指示，未激活的联接字段用图标<code>未🔗</code>来指示。处于未激活状态时，主、从数据源不使用该联接字段进行联接，单击图标可以进行状态切换。
+<p>可以选择“数据”➤“编辑关系”来创建或修改当前数据源关联关系<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093300.png" alt="编辑关系"><br>
+在弹出的“关系”窗口中我们可以通过“主数据源”下拉菜单选择主数据源<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093341.png" alt="“关系”对话框"><br>
+选择“自定义”，单击“添加”选项来创建新的自定义关系。在弹出的“添加/编辑字段映射”<br>
+对话框中选择主数据源中的“台区”字段，与从数据源中的“台区”字段进行联接，完成后单击<br>
+“确定”<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093416.png" alt="创建自定义关系"><br>
+回到“关系”对话框，可以看到新添加的联接关系<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093444.png" alt="自定义添加"><br>
+在“数据”窗口中，可以看到“台区基本信息”数据源字段和主数据源的联接状态，其中“台<br>
+区”字段与主数据源“重过载信息”的“台区”字段进行联接，其他字段则不作为联接字段<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093528.png" alt="激活的联接字段"><br>
+联接字段有“激活”和“未激活”两种状态，已激活的联接字段用图标 <code>🔗</code>来指示，未激活的联接字段用图标<code>未🔗</code>来指示。处于未激活状态时，主、从数据源不使用该联接字段进行联接，单击图标可以进行状态切换。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707093808.png" alt="未激活的联接字段"></p>
 <h3 id="3-行列转换">3、行列转换</h3>
-<p>在使用Tableau进行数据分析时，有时我们需要将源数据中的不同列整合至同一列， Tableau
-9.0及以上版本支持对源数据的行列转换。
-在数据源窗口，按住Shift或Ctrl，同时选中需要进行转换的列，单击已选择的任一列右侧的♥按钮，在弹出对话框中选择“数据透视表”。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707094048.png" alt="“行列转换”">
-执行完此操作后可发现，Tableau自动产生新列“数据透视表字段名称”，原列名称转换为该列的不同字段值，同时自动产生新列“数据透视表字段值”，原列的字段值转换至该列，用户可根据实际业务含义对列名进行修改。
+<p>在使用Tableau进行数据分析时，有时我们需要将源数据中的不同列整合至同一列， Tableau<br>
+9.0及以上版本支持对源数据的行列转换。<br>
+在数据源窗口，按住Shift或Ctrl，同时选中需要进行转换的列，单击已选择的任一列右侧的♥按钮，在弹出对话框中选择“数据透视表”。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707094048.png" alt="“行列转换”"><br>
+执行完此操作后可发现，Tableau自动产生新列“数据透视表字段名称”，原列名称转换为该列的不同字段值，同时自动产生新列“数据透视表字段值”，原列的字段值转换至该列，用户可根据实际业务含义对列名进行修改。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707094218.png" alt="操作完成界面"></p>
 <h3 id="4-数据加载">4、数据加载</h3>
 <p>Tableau加载数据有两种基本方式：一种是实时连接，即Tableau从数据源获取查询结果，本身不存储源数据；另一种是数据提取，将数据提取到Tableau的数据引擎中，由Tableau进行管理。</p>
@@ -84,17 +225,17 @@
 <h4 id="41创建数据提取">4.1创建数据提取</h4>
 <p>Tableau有两种方式创建数据提取：一种是完成数据连接之后，针对数据源进行提取数据操作；另一种是在新建数据源时选择“提取”方式。</p>
 <ol>
-<li>对数据源进行“提取数据”操作
-在主界面选择“数据”➤“&lt;数据源名称&gt;”➤“提取数据”，进入提取数据对话框；也可以选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”➤“提取”➤“编辑”
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095051.png" alt="提取数据">
-在打开的提取数据对话框中可以看到筛选器、聚合、行数3种提取选项
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095125.png" alt="提取数据对话框">
-选择“添加”，弹出添加筛选器对话框，选择用于筛选器的字段
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095206.png" alt="用作筛选器的字段">
-可以选择“年”和“月”作为此数据源的数据提取字段
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095238.png" alt="选择添加筛选器">
-在此界面可以指定是否聚合可视维度，也可以选择从数据源提取前若干行。选择“确定”，在弹出的另存为对话框中提取的数据以.tde格式保存，选择“保存”完成创建数据提取
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095319.png" alt="提取数据的保存">
+<li>对数据源进行“提取数据”操作<br>
+在主界面选择“数据”➤“&lt;数据源名称&gt;”➤“提取数据”，进入提取数据对话框；也可以选择“数据”➤“&lt;数据源名称&gt;”➤“编辑数据源”➤“提取”➤“编辑”<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095051.png" alt="提取数据"><br>
+在打开的提取数据对话框中可以看到筛选器、聚合、行数3种提取选项<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095125.png" alt="提取数据对话框"><br>
+选择“添加”，弹出添加筛选器对话框，选择用于筛选器的字段<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095206.png" alt="用作筛选器的字段"><br>
+可以选择“年”和“月”作为此数据源的数据提取字段<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095238.png" alt="选择添加筛选器"><br>
+在此界面可以指定是否聚合可视维度，也可以选择从数据源提取前若干行。选择“确定”，在弹出的另存为对话框中提取的数据以.tde格式保存，选择“保存”完成创建数据提取<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095319.png" alt="提取数据的保存"><br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190707095425.png" alt="说明"></li>
 </ol>
 <blockquote>
@@ -103,7 +244,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Tableau学习（第一章）-入门]]></title>
+        <title type="html"><![CDATA[Tableau学习（第一章）-数据分析入门]]></title>
         <id>https://jinwo.github.io/post/tableau-xue-xi-di-yi-zhang-ru-men</id>
         <link href="https://jinwo.github.io/post/tableau-xue-xi-di-yi-zhang-ru-men">
         </link>
@@ -113,16 +254,16 @@
         <content type="html"><![CDATA[<p>👥如果一次又一次地重复同一件事情，我永远也无法跳出固有的思维模式。 Tableau 可以让我们以一种完全不同的方式来查看数据。</p>
  <!-- more --> 
 <h3 id="1-tableau文件类型">1、Tableau文件类型</h3>
-<p>使用多种不同的Tableau文件类型，如工作簿、打包工作簿、数据提取、数据源和书签等，来保存和共享工作成果和数据源。
+<p>使用多种不同的Tableau文件类型，如工作簿、打包工作簿、数据提取、数据源和书签等，来保存和共享工作成果和数据源。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706215025.png" alt="文件类型"></p>
 <h3 id="2-数据角色">2、数据角色</h3>
-<p><strong>维度-度量</strong>
-维度和度量是Tableau的一种数据角色划分，离散和连续是另一种划分方式。
-<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706215955.png" alt="维度-度量">
-<code>**度量**</code>窗口显示的数据角色为度量，往往是数值字段，将其拖放到功能区时，Tableau默认会进行<code>聚合运算</code>（总计、平均值、中位数、最大值、计数等），同时，视图区将产生相应的<code>轴</code>。
-<code>维度</code>窗口显示的数据角色为维度，往往是一些分类、时间方面的<code>定性字段</code>，将其拖放到功能区时，Tableau不会对其进行计算，而是对视图区<code>进行分区</code>，维度的内容显示为各区的<code>标题</code>。
-<strong>离散-连续</strong>
-<code>离散和连续</code>是另一种数据角色分类，在Tableau中，<code>蓝色是离散字段</code>，<code>绿色是连续字段</code>。<code>离散</code>字段在行列功能区时总是在视图中显示为<code>标题</code>，而<code>连续</code>字段则在视图中显示为<code>轴</code>。
+<p><strong>维度-度量</strong><br>
+维度和度量是Tableau的一种数据角色划分，离散和连续是另一种划分方式。<br>
+<img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706215955.png" alt="维度-度量"><br>
+<code>**度量**</code>窗口显示的数据角色为度量，往往是数值字段，将其拖放到功能区时，Tableau默认会进行<code>聚合运算</code>（总计、平均值、中位数、最大值、计数等），同时，视图区将产生相应的<code>轴</code>。<br>
+<code>维度</code>窗口显示的数据角色为维度，往往是一些分类、时间方面的<code>定性字段</code>，将其拖放到功能区时，Tableau不会对其进行计算，而是对视图区<code>进行分区</code>，维度的内容显示为各区的<code>标题</code>。<br>
+<strong>离散-连续</strong><br>
+<code>离散和连续</code>是另一种数据角色分类，在Tableau中，<code>蓝色是离散字段</code>，<code>绿色是连续字段</code>。<code>离散</code>字段在行列功能区时总是在视图中显示为<code>标题</code>，而<code>连续</code>字段则在视图中显示为<code>轴</code>。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706222326.png" alt="离散-连续"></p>
 <pre><code>维度、度量、连续、离散的释义
 1、维度呈现为标题、度量呈现为连续轴
@@ -135,9 +276,9 @@
 <h3 id="3-字段类型">3、字段类型</h3>
 <p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706221239.png" alt="字段类型"></p>
 <h3 id="4-标记卡">4、标记卡</h3>
-<p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706223055.png" alt="标记卡和标记类型">
-3个<code>特殊按钮</code>，特殊按钮只有在选择了对应的标记类型时，才会显示出来。这3个特殊按钮
-分别是线图对应的路径、形状图形对应的形状、饼图对应的角度。
+<p><img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706223055.png" alt="标记卡和标记类型"><br>
+3个<code>特殊按钮</code>，特殊按钮只有在选择了对应的标记类型时，才会显示出来。这3个特殊按钮<br>
+分别是线图对应的路径、形状图形对应的形状、饼图对应的角度。<br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/20190706223145.png" alt="特殊标记按钮"></p>
 <!-- more -->
 ]]></content>
@@ -155,7 +296,7 @@
 ✍️  <strong>Picgo</strong> 免费的图床客户端客户端。你可以用它来上传您的图片至各大云端北非、取得外链... ...</p>
 <!-- more -->
 <p><a href="%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA">https://pockies.github.io/2019/04/27/weibo-to-github/</a></p>
-<p>PicGo是一款支持多图床上传的客户端软件，功能强大。
+<p>PicGo是一款支持多图床上传的客户端软件，功能强大。<br>
 根据你的系统下载安装对应的PicGo版本，打开软件并展开右侧图床设置；</p>
 <ul>
 <li>进入GitHub图床，在设置里依次填入：</li>
@@ -164,7 +305,7 @@
 <li>分支名-填写master即可；</li>
 <li>Token-填写上一步获取的GitHub令牌。</li>
 </ul>
-<p>点击<code>确定</code>，并设为<code>默认图床</code>
+<p>点击<code>确定</code>，并设为<code>默认图床</code><br>
 <img src="https://raw.githubusercontent.com/jinwo/pic/master/Pockies.19.04.27-15.08.07.png" alt="图床设定"></p>
 ]]></content>
     </entry>
